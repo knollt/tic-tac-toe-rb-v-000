@@ -14,19 +14,7 @@ WIN_COMBINATIONS = [
 board = Array.new(9, " ")
 #  same as board = [" "," "," "," "," "," "," "," "," "]
 
-def play (board)
 
-  until over?(board)
-    # puts 'turn'
-    turn?(board)
-  end
-  if won?(board)
-    # winner(board) == "X" || winner(board) == "O"
-    puts "Congratulations #{winner(board)}!"
-  elsif draw?(board)
-    puts "Cat's Game!"
-  end
-end
 
 # OUTPUT BOARD
 def display_board(board)
@@ -163,5 +151,18 @@ def winner(board)
       # puts "Congratulations O!"
       return "O"
     end
+  end
+end
+
+def play (board)
+  while !over?(board)
+    # puts 'turn'
+    turn?(board)
+  end
+  if won?(board)
+    # winner(board) == "X" || winner(board) == "O"
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+    puts "Cat's Game!"
   end
 end
