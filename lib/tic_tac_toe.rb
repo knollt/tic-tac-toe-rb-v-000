@@ -15,7 +15,7 @@ board = Array.new(9, " ")
 #  same as board = [" "," "," "," "," "," "," "," "," "]
 
 def play (board)
-  user_input = gets
+  
   until over?(board)
     # puts 'turn'
     turn?(board)
