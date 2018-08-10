@@ -155,7 +155,7 @@ end
 
 def play (board)
   user_input = gets
-  while !over?(board)
+  until over?(board)
     # puts 'turn'
     turn?(board)
   end
