@@ -15,14 +15,14 @@ board = Array.new(9, " ")
 #  same as board = [" "," "," "," "," "," "," "," "," "]
 
 def play (board)
-  
+
   until over?(board)
     # puts 'turn'
     turn?(board)
   end
   if won?(board)
     winner(board) == "X" || winner(board) == "O"
-    puts "Congratulations #{winner}!"
+    puts "Congratulations #{winner(board)}!"
   elsif draw?(board)
     puts "Cat's Game!"
   end
